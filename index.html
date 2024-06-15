@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e39531;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-details {
+            margin-bottom: 20px;
+        }
+
+        .confirmation-details p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .confirmation-details strong {
+            color: #007bff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Confirmation</h1>
+        <div class="confirmation-details" id="confirmation-details">
+            <p>Please confirm your booking details:</p>
+            <p><strong>City:</strong> <span id="confirm-city">helsinki</span></p>
+            <p><strong>Service:</strong> <span id="confirm-service">Driver-only</span></p>
+            <p><strong>Amount:</strong> <span id="confirm-amount">$100</span></p>
+            <p><strong>Hours:</strong> <span id="confirm-hours">5</span></p>
+        </div>
+        <button class="btn btn-primary">Send Email</button>
+        <button class="btn btn-success">Send WhatsApp Message</button>
+        <button class="btn btn-secondary">New Form</button>
+    </div>
+</body>
+</html>

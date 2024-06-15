@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const city = urlParams.get('city');
+            const service = urlParams.get('service');
+            const amount = urlParams.get('amount');
+            const hours = urlParams.get('hours');
+
+            document.getElementById('confirm-city').textContent = city;
+            document.getElementById('confirm-service').textContent = service;
+            document.getElementById('confirm-amount').textContent = amount;
+            document.getElementById('confirm-hours').textContent = hours;
+        });
+    </script>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <header>
+                <h1>Booking Confirmation</h1>
+            </header>
+            <div class="confirmation-details">
+                <p>Please confirm your booking details:</p>
+                <p><strong>City:</strong> <span id="confirm-city"></span></p>
+                <p><strong>Service:</strong> <span id="confirm-service"></span></p>
+                <p><strong>Amount:</strong> <span id="confirm-amount"></span></p>
+                <p><strong>Hours:</strong> <span id="confirm-hours"></span></p>
+                <button onclick="window.location.href='submit.html';">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
